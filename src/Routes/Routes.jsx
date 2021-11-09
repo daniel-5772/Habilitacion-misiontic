@@ -5,10 +5,12 @@ import {
     Route,
 
   } from "react-router-dom"; 
+import PrivateLayout from '../Layout/PrivateLayout';
 import PublicLayout from '../Layout/PublicLayout';
 import Dashboard from '../Pages/Admin/Dashboard';
 import Roles from '../Pages/Admin/Roles';
 import Ventas from '../Pages/Admin/Ventas';
+import Index from '../Pages/Public/Index';
 
 const Routes  = () => {
     return(
@@ -17,13 +19,13 @@ const Routes  = () => {
                 <Route path ={['/dash','/roles','/ventas']}>
                     <PrivateLayout>
                         <Switch>
-                            <Route path= 'dash'>
+                            <Route path= '/dash'>
                                 <Dashboard/>
                             </Route>
-                            <Route path= 'roles'>
+                            <Route path= '/roles'>
                                 <Roles/>
                             </Route>
-                            <Route path= 'ventas'>
+                            <Route path= '/ventas'>
                                 <Ventas />
                             </Route>
                         </Switch>
